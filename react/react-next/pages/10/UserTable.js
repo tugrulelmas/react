@@ -18,7 +18,7 @@ export default function UserTable({ users, deleteRow }) {
                                 <img src={user.avatar_url} alt={user.login} className="rounded" height="40em"></img>
                             </td>
                             <td>
-                                <Link href={`/9/${user.login}`}>
+                                <Link href={`/10/${user.login}`}>
                                     <a>{user.login}</a>
                                 </Link>
                             </td>

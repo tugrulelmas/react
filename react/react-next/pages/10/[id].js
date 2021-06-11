@@ -21,7 +21,7 @@ export default function UserRepo() {
     }, [id]);
 
     const navigatePage = (username) => {
-        router.push(`/9/${username}`);
+        router.push(`/10/${username}`);
     }
 
     return (
