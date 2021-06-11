@@ -19,12 +19,6 @@ export default function UsersPage() {
         setUsers({ loading: false, data: users });
     }
 
-    const deleteRow = (loginName) => {
-        setUsers((users) => {
-            return { loading: false, data: users.data.filter((user) => user.login !== loginName) }
-        });
-    }
-
     const nameChanged = (e) => {
         setUsername({ initial: false, value: e.target.value });
     }
@@ -54,7 +48,6 @@ export default function UsersPage() {
                             <tr>
                                 <th></th>
                                 <th>Login</th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,9 +57,6 @@ export default function UsersPage() {
                                 </td>
                                 <td>
                                     {user.login}
-                                </td>
-                                <td className="text-end">
-                                    <button onClick={() => deleteRow(user.login)} className="btn btn-danger"> <i className="bi bi-trash"></i> </button>
                                 </td>
                             </tr>)}
                         </tbody>

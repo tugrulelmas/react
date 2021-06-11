@@ -25,13 +25,9 @@ export default function UsersPage() {
 
     return (
         <Page>
-            <div className="container" style={{ padding: "10px", border: "3px solid green" }}>
-                <div style={{ marginBottom: "15px", border: "2px solid red" }}>
-                    <UserForm loading={users.loading} showUsers={showUsers} />
-                </div>
-                <div style={{ border: "2px solid blue" }}>
-                    <UserTable users={users.data} deleteRow={deleteRow} />
-                </div>
+            <div className="container">
+                <UserForm loading={users.loading} showItems={showUsers} />
+                <UserTable users={users} deleteRow={deleteRow} />
             </div>
         </Page>
     );
